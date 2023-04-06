@@ -4,6 +4,7 @@ import { Box, HStack, Pressable, Icon, Avatar, FlatList } from "native-base"
 
 import { Feather } from '@expo/vector-icons'
 import Storys from "../components/Storys"
+import Feed from "../components/Feed";
 
   const data = [{
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
@@ -110,6 +111,18 @@ export default function Home (){
           showsHorizontalScrollIndicator={false}
         />
       </Box>
+
+
+       <Box paddingX={4}>
+        
+        <FlatList 
+          data={data}
+          renderItem={ ({ item }) => <Feed data={item}/>}
+          showsVerticallScrollIndicator={false}
+        />
+        
+      </Box>
+
     </Box>
   );
 }

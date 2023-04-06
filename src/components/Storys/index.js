@@ -22,6 +22,7 @@ export default function Storys({ data }){
           borderRadius={8}
           alt="avatar url"
         />
+        
       </Box>
     </Box>
 
