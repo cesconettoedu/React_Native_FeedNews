@@ -1,21 +1,23 @@
+import React from 'react';
 import { NativeBaseProvider, Box } from 'native-base';
-import { StyleSheet, Text, View } from 'react-native';
 
 import Home from './src/pages'
 
+import { LinearGradient } from 'expo-linear-gradient';
+
+const config = {
+  dependencies: {
+    'linear-gradient': LinearGradient
+  }
+}
+
+
 export default function App() {
   return (
-   <NativeBaseProvider>
+   <NativeBaseProvider config={config}>
     <Home />
    </NativeBaseProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
